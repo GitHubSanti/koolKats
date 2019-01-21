@@ -7,6 +7,13 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
+    startDate : {
+      type: DataTypes.DATE,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
     startTime : {
       type: DataTypes.DATE,
       allowNull: false,

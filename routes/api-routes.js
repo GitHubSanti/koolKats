@@ -15,6 +15,12 @@ module.exports = function(app) {
 
   // POST route for saving a new todo. You can create a todo using the data on req.body
   app.post("/api/addEvent", function(req, res) {
+    console.log("this is from the server:");
+    console.log(req.body);
+    
+  });
+
+  app.get("/login", function(req, res) {
 
   });
 };
