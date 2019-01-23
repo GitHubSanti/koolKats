@@ -1,3 +1,10 @@
+//characterCounter
+$(document).ready(function() {
+  $('input#input_text, textarea#textarea1').characterCounter();
+});
+      
+
+
 // var timeInstance = M.Timepicker.getInstance(elem);
 var dateInstance = M.Datepicker.getInstance(elem);
 
