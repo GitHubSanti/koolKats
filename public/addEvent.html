@@ -1,72 +1,122 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
 
 <head>
+  <!-- Reset.css -->
+  <link type="text/css" rel="stylesheet" href="assets/css/reset.css">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- materialize font -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection" />
+  <!-- Sticky Footer CSS -->
+  <link type="text/css" rel="stylesheet" href="assets/css/stickyFooter.css">
 
-  <meta charset="UTF-8">
-  <title>Express Library</title>
 
-  <!-- Bootstrap CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-
-  <div class="container">
-
-    <div class="row">
-      <div class="col-6 mx-auto my-5">
-        <div class="card">
-          <div class="card-header">
-            Create Event
-          </div>
-
-          <div class="card-body">
-            <form action="" method="POST" role="form">
-              <div class="form-group">
-                <label for="">Title</label>
-                <input type="text" class="form-control" id="eventTitle" placeholder="">
-              </div>
-              <div class="form-group">
-                <label for="">Organizer</label>
-                <input type="text" class="form-control" id="eventOrganizer" placeholder="">
-              </div>
-              <div class="form-row mx-auto">
-                <div class="col-4 mb-3">
-                  <label for="">Start Time</label>
-                  <input type="text" class="form-control" id="eventStartTime" placeholder="">
-                </div>
-                <div class="col-4 mb-3">
-                  <label for="">End Time</label>
-                  <input type="text" class="form-control" id="eventEndTime" placeholder="">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="Description">Description</label>
-                <textarea class="form-control" id="eventDescription" rows="4"></textarea>
-              </div>
-            </form>
-            <br>
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary btn-md" id="add-btn">
-                <!-- <span class="fa fa-book"></span>  -->
-              Add Event</button>
-            </div>
-          </div>
-
-        </div>
+  <!-- nav bar -->
+  <nav>
+    <div class="nav-wrapper grey darken-4">
+      <div class="container">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#">Something1</a></li>
+          <li><a href="#">something2</a></li>
+          <li><a href="#">something3</a></li>
+        </ul>
       </div>
     </div>
+  </nav>
 
+  <!-- Event Form -->
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h4 class="header2">Add an Event.</h4>
+      </div>
+    </div>
+    <!-- event title input -->
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="eventTitle" type="text">
+        <label for="eventTitle">Event name</label>
+      </div>
+    </div>
+    <!-- event organizer input -->
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="eventOrganizer" type="text">
+        <label for="eventOrganizer">Organizer</label>
+      </div>
+    </div>
+    <!-- date input -->
+    <div class="row">
+      <form class="input-field col s6">
+        <input type="date" id="date" class="datepicker" />
+        <label for="date">Event Date</label>
+      </form>
+    </div>
+    <!-- start time input -->
+    <div class="row">
+      <form class="col s6">
+        <input type="time" id="sTime" class="timepicker" />
+        <label for="sTime">Start Time</label>
+      </form>
+      <!-- end time input -->
+      <form class="col s6">
+        <input type="time" id="eTime" class="timepicker" />
+        <label for="eTime">End Time</label>
+      </form>
+    </div>
+    <!-- Description input -->
+    <div class="row">
+      <div class="col s12">
+        <input id="EventDescription" type="text" length="140"></input>
+        <label for="EventDescription">Event Description</label>
+        <span class="character-counter" style="float: right; font-size: 12pt; height:1px;">0/140</span>
+      </div>
+    </div>
+    <br>
+    <!-- submit button -->
+    <div class="row">
+      <div class="col s9"></div>
+      <div class="col s3">
+        <button class="btn waves-effect waves-light formButton" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </div>
   </div>
 
-  <!-- Custom Script -->
-  <script src="js/add.js" type="text/javascript"></script>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+  <script type="text/javascript" src="assets/js/add.js"></script>
+
 </body>
+
+<footer class="page-footer grey darken-4">
+  <div class="footer-copyright grey darken-4">
+    <div class="container">
+      <span>
+        Copyright © 2019 koolKats All rights reserved.
+      </span>
+      <span class="right">
+        <a class="grey-text text-lighten-4" href="#!">About Us</a>
+        |
+        <a class="grey-text text-lighten-4" href="#!">Contact</a>
+        |
+        <a class="grey-text text-lighten-4" href="#!">GitHub</a>
+      </span>
+    </div>
+  </div>
+</footer>
 
 </html>
