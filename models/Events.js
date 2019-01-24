@@ -8,21 +8,21 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     startDate : {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
     startTime : {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
     endTime : {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
