@@ -1,0 +1,24 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "express": "^4.16.3",
+    "material-datepicker": "0.0.1",
+    "materialize-css": "^1.0.0",
+    "moment": "^2.23.0",
+    "mysql2": "^1.6.4",
+    "rome": "^2.1.22",
+    "sequelize": "^4.41.2"
+  }
+}
