@@ -6,7 +6,9 @@ $("#login-btn").on("click", function(event) {
     userCredentials.passwordInput = $("#inputPassword").val().trim();
 
     $.post("/api/login", userCredentials, (serverRes => {
-          console.log("message from server:");
           console.log(serverRes);
+          if (serverRes.length == 0 ) {
+            console.log("username and password");
+          } 
       }))
   });
