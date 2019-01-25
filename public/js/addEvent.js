@@ -72,8 +72,6 @@ let appriopriateDateTimeDropdowns = () => {
 let clearForm = () => {
     $("#eventTitle")
         .val("");
-    $("#eventOrganizer")
-        .val("");
     $("#eventDescription")
         .val("");
 }
@@ -88,12 +86,6 @@ let makePOSTCall = () => {
         passDataReq.push(true);
 
         newEvent.eventTitle = $("#eventTitle").val().trim();
-    };
-    if ($("#eventOrganizer").val().trim() == "") {
-        alert("Please give the event an organizer.")
-    } else {
-        passDataReq.push(true)
-        newEvent.eventOrganizer = $("#eventOrganizer").val().trim();
     };
     if (moment().format("MM/DD/YYYY") > moment($("#eventStartDate").val().trim()).format("MM/DD/YYYY")) {
         alert("Select a new start date. Can't schedule something in the past!")
@@ -128,7 +120,7 @@ let makePOSTCall = () => {
     // Determines whether or not to make a call to the server
     let promise = new Promise((resolve, reject) => {
         // console.log(passDataReq);
-        if (passDataReq.length == 6) {
+        if (passDataReq.length == 5) {
             resolve(newEvent);
         } else {
             reject("Data didn't meet all requirements. Can't create event");
