@@ -1,10 +1,10 @@
 body {
-    background-image: url(../imgs/backgrounds/prism/prism.png);
+    background-image: url(../imgs/backgrounds/concrete_seamless/concrete_seamless.png)
 }
 
 nav {
     margin-bottom: 5%;
-    color: #000000;
+    color: #eeeeee;
 }
 
 
@@ -50,8 +50,5 @@ a {
 }
 
 button {
-    background-color: transparent;
-    color: #eeeeee;
-    border: #6d6d6d 3px solid;
-    margin-right: 10px;
+    color: #26a69a;
 }
