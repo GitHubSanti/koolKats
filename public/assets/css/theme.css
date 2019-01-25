@@ -1,0 +1,41 @@
+body {
+    background-image: url(../imgs/backgrounds/prism/prism.png)
+}
+
+nav {
+    margin-bottom: 5%;
+    color: #000000;
+}
+
+footer {
+    margin-top: 8%;
+}
+
+#logo {
+    width: 5%;
+    height: 5%;
+    filter: drop-shadow(.1);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.fab {
+    color: #26a69a;
+    font-size: 35px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.card {
+    background-color: rgb(240, 239, 239);
+    align-content: center;
+}
+
+#title {
+    color: #26a69a;
+    padding-left: 2%;
+}
+

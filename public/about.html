@@ -10,10 +10,13 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
     <!-- Sticky Footer CSS -->
     <link type="text/css" rel="stylesheet" href="assets/css/stickyFooter.css">
     <!-- Style Sheet -->
-    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/theme.css">
     <!-- Icons -->
     <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
 
@@ -28,7 +31,8 @@
     <nav>
         <div class="nav-wrapper grey darken-4">
             <div class="container">
-                <a href="" class="brand-logo"><img src="assets/imgs/koolKatsOffWhite.png" id="logo">koolKats</a>
+                <a href="" class="brand-logo grey-text text-lighten-4"><img src="assets/imgs/koolKatsOffWhite.png" id="logo">
+                    koolKats</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="#">Something1</a></li>
                     <li><a href="#">something2</a></li>
@@ -37,70 +41,82 @@
             </div>
         </div>
     </nav>
+
+    <header>
+        <div class="container">
+        <div class="row">
+            <h2 id="title">The Developers</h2>
+        </div>
+        </div>
+    </header>
+
+    <main>
     <!-- About The Developers Body -->
 
     <div class="container">
         <div class="row">
-            <h4 class="header2">
-                Meet The Developers
-            </h4>
-        </div>
-        <div class="row">
-            <!-- DEV About -->
-            <div class="col s3">
-                <div class="row">
-                    <img src="https://via.placeholder.com/150" class="circle responsive-img">
+            <!-- DEV CARD -->
+            <div class="col-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="https://via.placeholder.com/150" class="circle responsive-img">
+                        <h5 class="card-title">Dev Name</h5>
+                        <p class="card-text">This is some about me for the developer</p>
+                        <a href="#"><i class="fab fa-github-square"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
-                <div class="row">
-                    <h6>Dev Name</h6>
-                    <a href="#"><i class="fab fa-github-square"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
+
             </div>
-            <!-- DEV About -->
-            <div class="col s3">
-                <div class="row">
-                    <img src="https://via.placeholder.com/150" class="circle responsive-img">
+
+            <!-- DEV CARD -->
+
+            <div class="col-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="https://via.placeholder.com/150" class="circle responsive-img">
+                        <h5 class="card-title">Dev Name</h5>
+                        <p class="card-text">This is some about me for the developer</p>
+                        <a href="#"><i class="fab fa-github-square"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
-                <div class="row">
-                    <h6>Dev Name</h6>
-                    <a href="#"><i class="fab fa-github-square"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
+
             </div>
-            <!-- DEV About -->
-            <div class="col s3">
-                <div class="row">
-                    <img src="https://via.placeholder.com/150" class="circle responsive-img">
+
+            <!-- DEV CARD -->
+
+            <div class="col-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="https://via.placeholder.com/150" class="circle responsive-img">
+                        <h5 class="card-title">Dev Name</h5>
+                        <p class="card-text">This is some about me for the developer</p>
+                        <a href="#"><i class="fab fa-github-square"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
-                <div class="row">
-                    <h6>Dev Name</h6>
-                    <a href="#"><i class="fab fa-github-square"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
+
             </div>
-            <!-- DEV About -->
-            <div class="col s3">
-                <div class="row">
-                    <img src="https://via.placeholder.com/150" class="circle responsive-img">
-                </div>
-                <div class="row">
-                    <h6>Dev Name</h6>
-                    <a href="#"><i class="fab fa-github-square"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+            <!-- DEV CARD -->
+
+            <div class="col-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="https://via.placeholder.com/150" class="circle responsive-img">
+                        <h5 class="card-title">Dev Name</h5>
+                        <p class="card-text">This is some about me for the developer</p>
+                        <a href="#"><i class="fab fa-github-square"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</main>
 
 
-    <!--JavaScript at end of body for optimized loading-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
-    <script type="text/javascript" src="assets/js/add.js"></script>
-
-</body>
 
 <footer class="page-footer grey darken-4">
     <div class="footer-copyright grey darken-4">
@@ -116,5 +132,19 @@
         </div>
     </div>
 </footer>
+
+<!-- Bootstrap Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+<!--JavaScript at end of body for optimized loading-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+<script type="text/javascript" src="assets/js/add.js"></script>
+</body>
 
 </html>
