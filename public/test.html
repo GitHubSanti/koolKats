@@ -6,32 +6,63 @@
     <link type="text/css" rel="stylesheet" href="assets/css/reset.css">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection" />
     <!-- materialize font -->
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
     <!-- Sticky Footer CSS -->
     <link type="text/css" rel="stylesheet" href="assets/css/stickyFooter.css">
+    <!-- Default Style Sheet -->
+    <link type="text/css" rel="stylesheet" href="assets/css/theme.css" title="default">
+    <!-- Alternative Style Sheet -->
+    <link type="text/css" rel="alternate stylesheet" href="assets/css/lightTheme.css" title="lightTheme">
+    <!-- Icons -->
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
+
     <!-- nav bar -->
     <nav>
         <div class="nav-wrapper grey darken-4">
             <div class="container">
-                <a href="#" class="brand-logo">Logo</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#">Something1</a></li>
-                    <li><a href="#">something2</a></li>
-                    <li><a href="#">something3</a></li>
+                <a href="" class="brand-logo grey-text text-lighten-2"><img src="assets/imgs/koolKatsOffWhite.png" id="logo">
+                    koolKats</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down grey-text text-lighten-2">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Calendar</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <header>
+        <!-- Switch Theme Button -->
+        <div class="col-11">
+            <div class="d-flex justify-content-end">
+                <button type="button" onclick="switch_style('default');return false;" name="theme" value="Default" id="default">DARK</button>
+
+                <button type="button" onclick="switch_style('lightTheme');return false;" name="theme" value="lightTheme"
+                    id="lightTheme">LIGHT</button>
+            </div>
+        </div>
+        <!-- Title -->
+        <div class="container">
+            <div class="row">
+                <h1 id="title">Calendar</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
 
     <!-- calander -->
 
@@ -45,7 +76,6 @@
 
             <!-- start of calendar dates and body -->
 
-<<<<<<< HEAD
             <div class="container">
                 <div class="basicWeekView">
                     <table>
@@ -95,21 +125,19 @@
                                                 </tbody>
                                             </table>
                                         </div>
-=======
-             <div class="buttonGroup">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col s12 center-align">
-                                    <a class="waves-effect waves-light btn"><i class="material-icons left">keyboard_arrow_left</i>Prev</a>
-                                    <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Next</a>
-                            </div>
-                        </div>
-                    </div>
->>>>>>> 2820e94ebf524e99258521ac08876be6c4aca072
+                                        <div class="buttonGroup">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col s12 center-align">
+                                                        <a class="waves-effect waves-light btn"><i class="material-icons left">keyboard_arrow_left</i>Prev</a>
+                                                        <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Next</a>
+                                                    </div>
+                                                </div>
+                                            </div>
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                         </tr>
                     </tbody>
                 </div>
@@ -132,7 +160,7 @@
     </div>
 
 
-     <!-- floating add event button/ change placement -->
+    <!-- floating add event button/ change placement -->
     <div class="addEvent">
         <div class="container">
             <div class="row">
@@ -144,10 +172,9 @@
 
     </div>
 
+</main>
 
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
-</body>
+
 
 <footer class="page-footer grey darken-4">
     <div class="footer-copyright grey darken-4">
@@ -156,12 +183,26 @@
                 Copyright © 2019 koolKats All rights reserved.
             </span>
             <span class="right">
-                <a class="grey-text text-lighten-4" href="#!">About Us</a>
+                <a class="grey-text text-lighten-2" href="#">About Us</a>
                 |
-                <a class="grey-text text-lighten-4" href="https://github.com/GitHubSanti/koolKats">GitHub</a>
+                <a class="grey-text text-lighten-2" href="https://github.com/GitHubSanti/koolKats">GitHub</a>
             </span>
         </div>
     </div>
 </footer>
+
+<!-- Bootstrap Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+<!--JavaScript at end of body for optimized loading-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+<script type="text/javascript" src="assets/js/add.js"></script>
+</body>
 
 </html>
