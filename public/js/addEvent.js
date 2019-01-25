@@ -10,7 +10,7 @@ let appriopriateDateTimeDropdowns = () => {
         option.text(formattedDate);
         $("#eventStartDate").append(option);
     }
-
+    // Create start time dropdown
     start = moment().startOf("day");
     end = moment().endOf("day");
     diff = end.diff(start, "hour")
@@ -40,6 +40,7 @@ let appriopriateDateTimeDropdowns = () => {
         option.text(time);
         $("#eventStartTime").append(option);
     }
+    // Create end time dropdown
     for (let index = 0; index < diff + 1; index++) {
         // Top of the hour
         let option = $("<option>");
