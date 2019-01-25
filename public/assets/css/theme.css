@@ -7,6 +7,7 @@ nav {
     color: #000000;
 }
 
+
 footer {
     margin-top: 8%;
 }
@@ -30,12 +31,20 @@ a {
 }
 
 .card {
-    background-color: rgb(240, 239, 239);
+    background-color: #eeeeee;
     align-content: center;
+    padding: 5px;
+    border: #6d6d6d 5px solid;
+}
+
+.eventForm {
+    background-color: #eeeeee;
+    border: #6d6d6d 5px solid;
 }
 
 #title {
     color: #26a69a;
-    padding-left: 2%;
+    padding-left: 3%;
+    border-bottom: #6d6d6d 5px solid;
 }
 
