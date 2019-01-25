@@ -50,5 +50,8 @@ a {
 }
 
 button {
-    color: #26a69a;
+    background-color: transparent;
+    color: #000000;
+    border: #6d6d6d 3px solid;
+    margin-right: 10px;
 }
