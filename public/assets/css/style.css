@@ -68,7 +68,7 @@ button {
   }
 
 
-  h1, h5, hr {
+  h1, h5, hr, .timesBody {
       color: #eeeeee;
   }
 
