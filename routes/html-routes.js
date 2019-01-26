@@ -21,7 +21,7 @@ module.exports = function(app) {
   });
 
   app.get("/calendar", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/calendar.html"));
+    res.sendFile(path.join(__dirname, "../public/calendarGrid.1.html"));
   });
 
   app.get("/addEvent", function(req, res) {
