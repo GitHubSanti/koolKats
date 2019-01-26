@@ -1,0 +1,13 @@
+body {
+    background-image: url(../imgs/backgrounds/prism/prism.png)
+}
+
+#logo {
+    width: 5%;
+    height: 5%;
+    filter: drop-shadow(.1);
+}
+
+#twelveAm, #oneAM, #twoAm,{
+    border:5px solid black;
+}
