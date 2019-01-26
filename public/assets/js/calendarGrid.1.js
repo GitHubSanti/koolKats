@@ -18,9 +18,16 @@ let createCalendarGrid = () => {
 
 start = moment().startOf("day");
 end = moment().endOf("day");
-diff = end.diff(start, "hour")
+diff = end.diff(start, "hour");
+
+let sideTimeLabels = $("<div>");
+sideTimeLabels.addClass("row justify-content-end pr-1");
+let timeLabel = moment().hour(0).minute(0).format("LT");
+sideTimeLabels.text(timeLabel);
+sideTimeLabels.attr("style","height: 35px")
+$("#timeLabels").append(sideTimeLabels);
 // Create time labels for first column (Only displays top of the hour)
-for (let index = 0; index < diff + 1; index++) {
+for (let index = 1; index < diff + 1; index++) {
     // Top of the hour
     let sideTimeLabels = $("<div>");
     sideTimeLabels.addClass("row justify-content-end pr-1");
