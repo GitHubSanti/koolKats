@@ -1,16 +1,3 @@
-/* body {
-    background-image: url(../imgs/backgrounds/prism/prism.png);
-} */
-
-/* nav {
-    margin-bottom: 5%;
-    color: #000000;
-} */
-
-
-/* footer {
-    margin-top: 8%;
-} */
 .gStyle {
     color: #eeeeee !important;
     margin-bottom: 10px;
@@ -58,7 +45,7 @@ a {
     color: #ff5722;
     padding-left: 3%;
     border-bottom: #6d6d6d 5px solid;
-    text-align: center;
+    /* text-align: center; */
 }
 
 button {
