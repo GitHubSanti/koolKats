@@ -12,7 +12,7 @@ $("#login-btn").on("click", function(event) {
                 alert("username and password combination doesn't exist");
             } else if (serverRes.length > 0) {
                 console.log("You're logged in!");
-                window.location.assign("/addEvent");
+                window.location.assign("/calendarGrid.1");
             }
         }))
     }
