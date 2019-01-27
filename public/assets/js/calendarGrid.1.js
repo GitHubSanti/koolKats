@@ -1,3 +1,4 @@
+// Function to create dynamic calendar and timeslot IDs
 let createCalendarGrid = () => {
     start = moment().startOf("day");
     end = moment().endOf("day");
@@ -158,7 +159,7 @@ let createCalendarGrid = () => {
     };
     
     // Create wednesday time blocks
-    for (let index = 2; index < diff + 1; index++) {
+    for (let index = 0; index < diff + 1; index++) {
         // Top of the hour
         let wednesdayBlocks = $("<div>");
         wednesdayBlocks.addClass("row border-top");
@@ -350,5 +351,13 @@ let createCalendarGrid = () => {
     };
 };
 
+let getTableEvents = 
+
 createCalendarGrid();
 
+let url = "/api/addEvent/" + localStorage.getItem("UserID");
+// Send an AJAX POST-request with jQuery
+$.post(url, dataToServer, (serverRes => {
+    //   window.location.href = "/test";
+    console.log(serverRes);
+}))
