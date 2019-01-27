@@ -153,7 +153,7 @@ appriopriateDateTimeDropdowns();
 clearForm();
 
 // Check to see URL
-console.log(window.location.href);
+//console.log(window.location.href);
 
 
 // When user clicks 'Add Event' button
@@ -199,7 +199,7 @@ function set_style_from_cookie()
 function set_cookie ( cookie_name, cookie_value,
     lifespan_in_days, valid_domain )
 {
-    
+    console.log(cookie_name)
     var domain_string = valid_domain ?
                        ("; domain=" + valid_domain) : '' ;
     document.cookie = cookie_name +
@@ -224,4 +224,36 @@ function get_cookie ( cookie_name )
 	return '' ;
 }
 
+// Side Bar JS
 
+$(document).ready(function () {
+
+    set_style_from_cookie();
+    //  $("#sidebar").mCustomScrollbar({
+    //       theme: "minimal"
+    //  });
+    //switch_style();
+    
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+
+$(document).ready(function () {
+
+    //  $("#sidebar").mCustomScrollbar({
+    //       theme: "minimal"
+    //  });
+
+    $('#sidebarCollapse').on('click', function () {
+        // open or close navbar
+        $('#sidebar').toggleClass('active');
+        // close dropdowns
+        $('.collapse.in').toggleClass('in');
+        // and also adjust aria-expanded attributes we use for the open/closed arrows
+        // in our CSS
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+
+});
