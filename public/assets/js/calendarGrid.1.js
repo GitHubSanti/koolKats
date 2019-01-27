@@ -20,13 +20,6 @@ start = moment().startOf("day");
 end = moment().endOf("day");
 diff = end.diff(start, "hour");
 
-// let sideTimeLabels = $("<div>");
-// sideTimeLabels.addClass("row justify-content-end pr-1");
-// let timeLabel = moment().hour(0).minute(0).format("LT");
-// sideTimeLabels.text(timeLabel);
-// sideTimeLabels.attr("style","height: 35px")
-// $("#timeLabels").append(sideTimeLabels);
-// Create time labels for first column (Only displays top of the hour)
 for (let index = 0; index < diff + 1; index++) {
     // Top of the hour
     let sideTimeLabels = $("<div>");
@@ -88,8 +81,8 @@ for (let index = 0; index < diff + 1; index++) {
     // Top of the hour
     let mondayBlocks = $("<div>");
     mondayBlocks.addClass("row border-top");
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    let blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(0).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 1
+    let blockID = moment().weekday(1).format("MM/DD/YYYY") + moment().hour(index).minute(0).format("LT");
     let modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -98,8 +91,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#monday").append(mondayBlocks);
     
     mondayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(15).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 1
+    blockID = moment().weekday(1).format("MM/DD/YYYY") + moment().hour(index).minute(15).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -108,8 +101,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#monday").append(mondayBlocks);
 
     mondayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(30).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 1
+    blockID = moment().weekday(1).format("MM/DD/YYYY") + moment().hour(index).minute(30).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -118,8 +111,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#monday").append(mondayBlocks);
 
     mondayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(45).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 1
+    blockID = moment().weekday(1).format("MM/DD/YYYY") + moment().hour(index).minute(45).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -133,8 +126,8 @@ for (let index = 0; index < diff + 1; index++) {
     // Top of the hour
     let tuesdayBlocks = $("<div>");
     tuesdayBlocks.addClass("row border-top");
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    let blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(0).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 2
+    let blockID = moment().weekday(2).format("MM/DD/YYYY") + moment().hour(index).minute(0).format("LT");
     let modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -143,8 +136,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#tuesday").append(tuesdayBlocks);
     
     tuesdayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(15).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 2
+    blockID = moment().weekday(2).format("MM/DD/YYYY") + moment().hour(index).minute(15).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -153,8 +146,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#tuesday").append(tuesdayBlocks);
 
     tuesdayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(30).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 2
+    blockID = moment().weekday(2).format("MM/DD/YYYY") + moment().hour(index).minute(30).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -163,8 +156,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#tuesday").append(tuesdayBlocks);
 
     tuesdayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(45).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 2
+    blockID = moment().weekday(2).format("MM/DD/YYYY") + moment().hour(index).minute(45).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -175,12 +168,12 @@ for (let index = 0; index < diff + 1; index++) {
 
 
 // Create wednesday time blocks
-for (let index = 0; index < diff + 1; index++) {
+for (let index = 2; index < diff + 1; index++) {
     // Top of the hour
     let wednesdayBlocks = $("<div>");
     wednesdayBlocks.addClass("row border-top");
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    let blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(0).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 3
+    let blockID = moment().weekday(3).format("MM/DD/YYYY") + moment().hour(index).minute(0).format("LT");
     let modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -189,8 +182,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#wednesday").append(wednesdayBlocks);
     
     wednesdayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(15).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 3
+    blockID = moment().weekday(3).format("MM/DD/YYYY") + moment().hour(index).minute(15).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -199,8 +192,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#wednesday").append(wednesdayBlocks);
 
     wednesdayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(30).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 3
+    blockID = moment().weekday(3).format("MM/DD/YYYY") + moment().hour(index).minute(30).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -209,8 +202,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#wednesday").append(wednesdayBlocks);
 
     wednesdayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(45).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 3
+    blockID = moment().weekday(3).format("MM/DD/YYYY") + moment().hour(index).minute(45).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -227,8 +220,8 @@ for (let index = 0; index < diff + 1; index++) {
     // Top of the hour
     let thursdayBlocks = $("<div>");
     thursdayBlocks.addClass("row border-top");
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    let blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(0).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 4
+    let blockID = moment().weekday(4).format("MM/DD/YYYY") + moment().hour(index).minute(0).format("LT");
     let modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -237,8 +230,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#thursday").append(thursdayBlocks);
     
     thursdayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(15).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 4
+    blockID = moment().weekday(4).format("MM/DD/YYYY") + moment().hour(index).minute(15).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -247,8 +240,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#thursday").append(thursdayBlocks);
 
     thursdayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(30).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 4
+    blockID = moment().weekday(4).format("MM/DD/YYYY") + moment().hour(index).minute(30).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -257,8 +250,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#thursday").append(thursdayBlocks);
 
     thursdayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(45).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 4
+    blockID = moment().weekday(4).format("MM/DD/YYYY") + moment().hour(index).minute(45).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -273,8 +266,8 @@ for (let index = 0; index < diff + 1; index++) {
     // Top of the hour
     let fridayBlocks = $("<div>");
     fridayBlocks.addClass("row border-top");
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    let blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(0).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 5
+    let blockID = moment().weekday(5).format("MM/DD/YYYY") + moment().hour(index).minute(0).format("LT");
     let modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -283,8 +276,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#friday").append(fridayBlocks);
     
     fridayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(15).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 5
+    blockID = moment().weekday(5).format("MM/DD/YYYY") + moment().hour(index).minute(15).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -293,8 +286,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#friday").append(fridayBlocks);
 
     fridayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(30).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 5
+    blockID = moment().weekday(5).format("MM/DD/YYYY") + moment().hour(index).minute(30).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -303,8 +296,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#friday").append(fridayBlocks);
 
     fridayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(45).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 5
+    blockID = moment().weekday(5).format("MM/DD/YYYY") + moment().hour(index).minute(45).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -318,8 +311,8 @@ for (let index = 0; index < diff + 1; index++) {
     // Top of the hour
     let saturdayBlocks = $("<div>");
     saturdayBlocks.addClass("row border-top");
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    let blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(0).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 6
+    let blockID = moment().weekday(6).format("MM/DD/YYYY") + moment().hour(index).minute(0).format("LT");
     let modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -328,8 +321,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#saturday").append(saturdayBlocks);
     
     saturdayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(15).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 6
+    blockID = moment().weekday(6).format("MM/DD/YYYY") + moment().hour(index).minute(15).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -338,8 +331,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#saturday").append(saturdayBlocks);
 
     saturdayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(30).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 6
+    blockID = moment().weekday(6).format("MM/DD/YYYY") + moment().hour(index).minute(30).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
@@ -348,8 +341,8 @@ for (let index = 0; index < diff + 1; index++) {
     $("#saturday").append(saturdayBlocks);
 
     saturdayBlocks = $("<div>")
-    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 0
-    blockID = moment().weekday(0).format("MM/DD/YYYY") + moment().hour(index).minute(45).format("LT");
+    // Responsible for creating unique ID for block (MM/DD/YYYY XX:XX AM|PM) | Weekday 6
+    blockID = moment().weekday(6).format("MM/DD/YYYY") + moment().hour(index).minute(45).format("LT");
     modified = blockID.replace(":","");
     modified = modified.replace("/","");
     modified = modified.replace("/","");
