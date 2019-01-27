@@ -45,12 +45,13 @@ a {
     color: #ff5722;
     padding-left: 3%;
     border-bottom: #6d6d6d 5px solid;
-    /* text-align: center; */
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 button {
     background-color: transparent;
-    color: #eeeeee;
+    color: #ff8a50;
     border: #6d6d6d 3px solid;
     margin-right: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -59,7 +60,7 @@ button {
     text-decoration: none;
 }
 
-.button:hover {
+button:hover {
     background-color: #ff5722 !important;
     color: white;
   }
