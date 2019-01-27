@@ -86,7 +86,10 @@ button {
 	overflow: hidden;
 }
 
-.container{
-	overflow: auto;
-}
-   
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+    width: 0px;
+    }
