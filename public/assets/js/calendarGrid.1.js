@@ -158,7 +158,7 @@ let createCalendarGrid = () => {
     };
     
     // Create wednesday time blocks
-    for (let index = 2; index < diff + 1; index++) {
+    for (let index = 0; index < diff + 1; index++) {
         // Top of the hour
         let wednesdayBlocks = $("<div>");
         wednesdayBlocks.addClass("row border-top");
