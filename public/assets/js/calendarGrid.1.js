@@ -351,13 +351,4 @@ let createCalendarGrid = () => {
     };
 };
 
-let getTableEvents = 
-
 createCalendarGrid();
-
-let url = "/api/addEvent/" + localStorage.getItem("UserID");
-// Send an AJAX POST-request with jQuery
-$.post(url, dataToServer, (serverRes => {
-    //   window.location.href = "/test";
-    console.log(serverRes);
-}))
