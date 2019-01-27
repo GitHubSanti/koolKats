@@ -1,3 +1,4 @@
+// Function to create dynamic calendar and timeslot IDs
 let createCalendarGrid = () => {
     start = moment().startOf("day");
     end = moment().endOf("day");
@@ -351,4 +352,3 @@ let createCalendarGrid = () => {
 };
 
 createCalendarGrid();
-
