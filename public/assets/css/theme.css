@@ -1,3 +1,4 @@
+
 .centered {
     position: fixed;
     top: 50%;
@@ -50,6 +51,8 @@
     margin-left: 45px;
     margin-right: 45px;
 }
+
+
 
 .gStyleSet {
     border-bottom: #eeeeee solid 3px;
@@ -337,7 +340,6 @@ a.article, a.article:hover {
     }
 
 }
-
 .bottom {
     position: fixed;
     bottom: 0;
@@ -347,3 +349,4 @@ a.article, a.article:hover {
     display: flex; 
     justify-content: flex-end;
 }
+
