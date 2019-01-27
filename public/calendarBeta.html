@@ -15,7 +15,7 @@
     <!-- Sticky Footer CSS -->
     <link type="text/css" rel="stylesheet" href="assets/css/stickyFooter.css">
     <!-- Default Style Sheet -->
-    <!-- <link type="text/css" rel="stylesheet" href="assets/css/theme.css" title="default"> -->
+    <link type="text/css" rel="stylesheet" href="assets/css/theme.css" title="default">
     <link type="text/css" rel="stylesheet" href="assets/css/style.css" title="default">
 
     <!-- Alternative Style Sheet -->
@@ -26,6 +26,13 @@
     <!-- Bootstrap CSS & JS -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Popper Reference -->
@@ -43,24 +50,87 @@
 <body>
     <!-- nav bar -->
     
-
-     <header>
-            <!-- Switch Theme Button -->
-            <div class="col-11">
-                <div class="d-flex justify-content-end">
+    <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header gStyleSet">
+                    <a href="" class="brand-logo"><img src="assets/imgs/koolKatsOffWhite.png" id="logo">
+                        <h3>koolKats</h3>
+                    </a>
+                </div>
+    
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Your
+                            Calendar</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Create Event</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+    
+                    </li>
+                </ul>
+    
+                <ul class="list-unstyled CTAs">
+                    <li>
+                        <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Login</a>
+                    </li>
+                    <li>
+                        <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Register</a>
+                    </li>
+                </ul>
+    
+                <div class="container bottom">
+                    <span class="gStyleSet">
+                        <a href="#"><i class="fab fa-github-square gStyle"></i></a><a href="https://github.com/GitHubSanti/koolKats">GitHub
+                        </a>
+                    </span>
+                    <br>
+                    <span>
+                        Copyright © 2019 koolKats
+                    </span>
+                    <br>
+                    <span>
+                        All rights reserved.
+                    </span>
+    
+    
+                </div>
+            </nav>
+    
+            <!-- Page Content Holder -->
+            <div id="content">
+    
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="container right">
                     <button type="button" onclick="switch_style('default');return false;" name="theme" value="Default" id="default">DARK</button>
     
                     <button type="button" onclick="switch_style('lightTheme');return false;" name="theme" value="lightTheme"
                         id="lightTheme">LIGHT</button>
                 </div>
-            </div>
-            <!-- Title -->
-            <div class="container-fluid">
-                <div class="row">
-                    <h1 id="title">Calendar</h1>
+    
+    
+    
+                <!-- Title -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <h1 id="title">Register Account</h1>
+                    </div>
                 </div>
-            </div>
-    </header>
+    
+
+  
 
     <main>
         <!-- <div class="container-fluid"> -->
