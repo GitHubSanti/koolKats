@@ -28,7 +28,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 </head>
 
-<body>
+<body onload="set_style_from_cookie()">
 
   <div class="wrapper">
     <!-- Sidebar Holder -->
@@ -93,24 +93,26 @@
         <span></span>
         <span></span>
       </button>
-      <div class="container right">
+      <div class="container right animated bounceInDown">
         <button type="button" onclick="switch_style('default');return false;" name="theme" value="Default" id="default">DARK</button>
 
         <button type="button" onclick="switch_style('lightTheme');return false;" name="theme" value="lightTheme" id="lightTheme">LIGHT</button>
       </div>
 
       <!-- Title -->
-      <div class="container-fluid">
+      <div class="container-fluid animated bounceInDown col-12">
         <div class="row">
+          <div class="col-12">
           <h1 id="title">Create Event</h1>
+          </div>
         </div>
       </div>
       </header>
 
       <!-- Form container -->
-      <div class="container-fluid">
+      <div class="container-fluid animated bounceInDown">
         <div class="row">
-          <div class="col-12 mx-auto">
+          <div class="col-10">
             <div class="card">
               <div class="card-body">
                 <!-- Title Form -->
@@ -120,27 +122,27 @@
                     <input type="text" class="form-control col-6" id="eventTitle" placeholder="">
                   </div>
                   <!-- Event Date dropdown -->
-                  <div class="form-row mx-auto">
-                    <div class="col-6 mb-3 form-group">
+                  <div class="form-row">
+                    <div class="form-group dropDown">
                       <label for="eventStartDate">Start Date</label>
-                      <select class="form-control" id="eventStartDate">
+                      <select class="form-control dropDown" id="eventStartDate">
                       </select>
                     </div>
                     <!-- Event start drop down -->
-                    <div class="col-6 mb-3 form-group">
+                    <div class="form-group dropDown">
                       <label for="eventStartTime">Start Time</label>
-                      <select class="form-control" id="eventStartTime">
+                      <select class="form-control dropDown" id="eventStartTime">
                       </select>
                     </div>
                     <!-- Event end drown down -->
-                    <div class="col-6 mb-3 form-group">
+                    <div class="form-group dropDown">
                       <label for="eventEndTime">End Time</label>
-                      <select class="form-control" id="eventEndTime">
+                      <select class="form-control dropDown" id="eventEndTime">
                       </select>
                     </div>
                   </div>
                   <!-- Event description form -->
-                  <div class="form-group col-12">
+                  <div class="form-group">
                     <label for="Description">Description</label>
                     <textarea class="form-control" id="eventDescription" rows="4"></textarea>
                   </div>
@@ -161,7 +163,7 @@
     </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"

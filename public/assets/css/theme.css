@@ -5,7 +5,7 @@
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
   }
-  
+
 .enterButton {
     height: 300px;
     width: 600px;
@@ -29,6 +29,12 @@
 	resize:none !important;
     height:30px !important;
     color: #eeeeee !important;
+}
+
+.dropDown {
+    width: 200px !important;
+    /* padding-right: 50px !important; */
+    margin-right: 5% !important;
 }
 
 #eventDescription {

@@ -153,7 +153,7 @@ appriopriateDateTimeDropdowns();
 clearForm();
 
 // Check to see URL
-console.log(window.location.href);
+//console.log(window.location.href);
 
 
 // When user clicks 'Add Event' button
@@ -199,7 +199,7 @@ function set_style_from_cookie()
 function set_cookie ( cookie_name, cookie_value,
     lifespan_in_days, valid_domain )
 {
-    
+    console.log(cookie_name)
     var domain_string = valid_domain ?
                        ("; domain=" + valid_domain) : '' ;
     document.cookie = cookie_name +
@@ -228,10 +228,12 @@ function get_cookie ( cookie_name )
 
 $(document).ready(function () {
 
-    $("#sidebar").mCustomScrollbar({
-         theme: "minimal"
-    });
-
+    set_style_from_cookie();
+    //  $("#sidebar").mCustomScrollbar({
+    //       theme: "minimal"
+    //  });
+    //switch_style();
+    
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
     });
@@ -240,9 +242,9 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-    $("#sidebar").mCustomScrollbar({
-         theme: "minimal"
-    });
+    //  $("#sidebar").mCustomScrollbar({
+    //       theme: "minimal"
+    //  });
 
     $('#sidebarCollapse').on('click', function () {
         // open or close navbar
