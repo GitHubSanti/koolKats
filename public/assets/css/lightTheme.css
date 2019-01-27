@@ -42,7 +42,7 @@ a {
 }
 
 .eventForm {
-    background-image: url(../imgs/backgrounds/concrete_seamless/concrete_seamless.png) !important;
+    background-image: url(../imgs/backgrounds/gplaypattern/gplaypattern_@2X.png) !important;
     /* border: #6d6d6d 5px solid; */
     padding: 3%;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -57,7 +57,7 @@ a {
 }
 
 button {
-    background-image: url(../imgs/backgrounds/concrete_seamless/concrete_seamless.png);
+    background-image: url(../imgs/backgrounds/gplaypattern/gplaypattern_@2X.png);
     color: #00766c;
     /* border: #26a69a 3px solid; */
     margin-right: 10px;
