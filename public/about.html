@@ -31,14 +31,14 @@
 <body>
 
     <div class="wrapper">
-        <!-- Sidebar Holder -->
+        <!-- Sidebar Holder and Navbar Logo-->
         <nav id="sidebar">
             <div class="sidebar-header gStyleSet">
                 <a href="" class="brand-logo"><img src="assets/imgs/koolKatsOffWhite.png" id="logo">
                     <h3>koolKats</h3>
                 </a>
             </div>
-
+            <!-- Navbar menu options -->
             <ul class="list-unstyled components">
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Your
@@ -48,16 +48,15 @@
                             <a href="#">Home</a>
                         </li>
                         <li>
-                            <a href="#">Create Event</a>
+                            <a href="/addevent">Create Event</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">About</a>
-
                 </li>
             </ul>
-
+            <!-- Navbar buttons -->
             <ul class="list-unstyled CTAs">
                 <li>
                     <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Login</a>
@@ -66,7 +65,7 @@
                     <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Register</a>
                 </li>
             </ul>
-
+            <!-- Navbar footer -->
             <div class="container bottom">
                 <span class="gStyleSet">
                     <a href="#"><i class="fab fa-github-square gStyle"></i></a><a href="https://github.com/GitHubSanti/koolKats">GitHub
@@ -80,29 +79,25 @@
                 <span>
                     All rights reserved.
                 </span>
-
-
             </div>
         </nav>
 
         <!-- Page Content Holder -->
         <div id="content">
-            <div class="container-fluid animated bounceInDown">
-                <div class="row">
-                    <button type="button" id="sidebarCollapse" class="navbar-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <div class="container right">
-                        <button type="button" onclick="switch_style('default');return false;" name="theme" value="Default"
-                            id="default">DARK</button>
+            <!-- Navbar collapse button -->
+            <button type="button" id="sidebarCollapse" class="navbar-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- Switch theme buttons -->
+            <div class="container right animated bounceInDown">
+                <button type="button" onclick="switch_style('default');return false;" name="theme" value="Default" id="default">DARK</button>
 
-                        <button type="button" onclick="switch_style('lightTheme');return false;" name="theme" value="lightTheme"
-                            id="lightTheme">LIGHT</button>
-                    </div>
-                </div>
+                <button type="button" onclick="switch_style('lightTheme');return false;" name="theme" value="lightTheme"
+                    id="lightTheme">LIGHT</button>
             </div>
+
             <!-- Title -->
             <div class="container-fluid animated bounceInDown">
                 <div class="row">
@@ -111,11 +106,8 @@
                     </div>
                 </div>
             </div>
-            </header>
-
 
             <!-- About The Developers Body -->
-
             <div class="container-fluid">
                 <div class="row">
                     <!-- DEV CARD -->
@@ -123,53 +115,48 @@
                         <div class="card text-center">
                             <div class="card-body">
                                 <img src="assets/imgs/profileImgs/sloth1.jpg" class="img-fluid rounded-circle" alt="Responsive image">
-                                <h5 class="card-title">Dev Name</h5>
-                                <p class="card-text">This is some about me for the developer</p>
-                                <a href="#"><i class="fab fa-github-square"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <h5 class="card-title">Kristen Austin</h5>
+                                <p class="card-text">Sarcastic, mostly introverted human from planet earth. Her hobbies
+                                    include breathing oxygen.</p>
+                                <a href="https://github.com/knaustin"><i class="fab fa-github-square"></i></a>
+                                <a href="https://www.linkedin.com/in/kristen-austin-a6638a123/"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
-
                     </div>
-
                     <!-- DEV CARD -->
-
                     <div class="col-3 animated bounceInRight delay-1s">
                         <div class="card text-center">
                             <div class="card-body">
                                 <img src="assets/imgs/profileImgs/sloth2.JPG" class="img-fluid rounded-circle" alt="Responsive image">
-                                <h5 class="card-title">Dev Name</h5>
-                                <p class="card-text">This is some about me for the developer</p>
-                                <a href="#"><i class="fab fa-github-square"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <h5 class="card-title">Santi Sepulveda</h5>
+                                <p class="card-text">Once wrestled a bear in Costco. He lost. It was stuffed. He now
+                                    only shops at Sam's Club.</p>
+                                <a href="https://github.com/GitHubSanti"><i class="fab fa-github-square"></i></a>
+                                <a href="https://www.linkedin.com/in/santiago-sepulveda-0b97ab40/"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
-
                     </div>
-
                     <!-- DEV CARD -->
-
                     <div class="col-3 animated bounceInRight delay-2s">
                         <div class="card text-center">
                             <div class="card-body">
                                 <img src="assets/imgs/profileImgs/sloth3.jpg" class="img-fluid rounded-circle" alt="Responsive image">
-                                <h5 class="card-title">Dev Name</h5>
-                                <p class="card-text">This is some about me for the developer</p>
-                                <a href="#"><i class="fab fa-github-square"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <h5 class="card-title">Allie Valder</h5>
+                                <p class="card-text">A fearless leader of People Against Sporks, she knows they make
+                                    lousy spoons and forks.</p>
+                                <a href="https://github.com/avalder01"><i class="fab fa-github-square"></i></a>
+                                <a href="https://www.linkedin.com/in/allisonvalder/"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
-
                     </div>
-
                     <!-- DEV CARD -->
-
                     <div class="col-3 animated bounceInRight delay-3s">
                         <div class="card text-center">
                             <div class="card-body">
                                 <img src="assets/imgs/profileImgs/sloth4.jpg" class="img-fluid rounded-circle" alt="Responsive image">
-                                <h5 class="card-title">Dev Name</h5>
-                                <p class="card-text">This is some about me for the developer</p>
+                                <h5 class="card-title">Bingxi Du</h5>
+                                <p class="card-text">Can beat Ninja to Battle Royal, he retired from the sport
+                                    realizing his powers were too strong.</p>
                                 <a href="#"><i class="fab fa-github-square"></i></a>
                                 <a href="#"><i class="fab fa-linkedin"></i></a>
                             </div>
@@ -191,6 +178,7 @@
         <script src="assets/js/calendarGrid.1.js" type="text/javascript"></script>
         <script src="assets/js/add.js"></script>
 
+        <!-- Navbar collapse script -->
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#sidebarCollapse').on('click', function () {

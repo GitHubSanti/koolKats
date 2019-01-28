@@ -31,14 +31,14 @@
 <body>
 
     <div class="wrapper">
-        <!-- Sidebar Holder -->
+        <!-- Sidebar Holder and Navbar Logo-->
         <nav id="sidebar">
             <div class="sidebar-header gStyleSet">
                 <a href="" class="brand-logo"><img src="assets/imgs/koolKatsOffWhite.png" id="logo">
                     <h3>koolKats</h3>
                 </a>
             </div>
-
+            <!-- Navbar menu options -->
             <ul class="list-unstyled components">
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Your
@@ -48,16 +48,15 @@
                             <a href="#">Home</a>
                         </li>
                         <li>
-                            <a href="#">Create Event</a>
+                            <a href="/addevent">Create Event</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">About</a>
-
                 </li>
             </ul>
-
+            <!-- Navbar buttons -->
             <ul class="list-unstyled CTAs">
                 <li>
                     <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Login</a>
@@ -66,7 +65,7 @@
                     <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Register</a>
                 </li>
             </ul>
-
+            <!-- Navbar footer -->
             <div class="container bottom">
                 <span class="gStyleSet">
                     <a href="#"><i class="fab fa-github-square gStyle"></i></a><a href="https://github.com/GitHubSanti/koolKats">GitHub
@@ -80,19 +79,18 @@
                 <span>
                     All rights reserved.
                 </span>
-
-
             </div>
         </nav>
 
         <!-- Page Content Holder -->
         <div id="content">
-
+            <!-- Navbar collapse button -->
             <button type="button" id="sidebarCollapse" class="navbar-btn">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            <!-- Theme switching buttons -->
             <div class="container right">
                 <button type="button" onclick="switch_style('default');return false;" name="theme" value="Default" id="default">DARK</button>
 
@@ -100,18 +98,17 @@
                     id="lightTheme">LIGHT</button>
             </div>
 
-
-
             <!-- Title -->
-            <div class="container-fluid">
-                <div class="row">
-                    <h1 id="title">Register Account</h1>
+            <div class="container-fluid animated bounceInDown">
+                <div class="col-12">
+                    <div class="row">
+                        <h1 id="title">Register Account</h1>
+                    </div>
                 </div>
             </div>
 
-
             <!-- Create Login Form -->
-            <div class="container-fluid eventForm">
+            <div class="container-fluid eventForm animated bounceInDown col-10">
                 <form role="form">
                     <!-- Enter Username -->
                     <div class="form-group">
@@ -130,13 +127,12 @@
                     </div>
                     <!-- submit button -->
                     <div class="text-right">
-                    <button type="submit">Register</button>
+                        <button type="submit">Register</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -150,6 +146,7 @@
     <script src="assets/js/calendarGrid.1.js" type="text/javascript"></script>
     <script src="assets/js/add.js"></script>
 
+<!-- Navbar collapse script -->
     <script type="text/javascript">
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
