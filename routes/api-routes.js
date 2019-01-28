@@ -50,10 +50,23 @@ module.exports = function(app) {
       });
   });
 
+  // Deletes Event
+app.delete("/api/deleteEvent/:id", function(req,res) {
+  db.Events.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(DBresults) {
+    res.json(DBresults);
+  })
+});
+
   // GET route to retrieve all the events and the users associated
-  app.get("/api/calendar", function(req, res) {
+  app.get("/api/calendar/:id", function(req, res) {
     db.Events.findAll({
-      include: db.Users
+      where: {
+        UserId: req.params.id
+      }
     }).then(function(allEvents) {
       res.json(allEvents);
     });
