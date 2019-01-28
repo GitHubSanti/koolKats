@@ -25,6 +25,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/createLogin.html"));
   });
 
+  // Need to add if/then statement to check for logged in, and if not reroute to login
   app.get("/:id/calendar", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/calendar.html"));
   });
