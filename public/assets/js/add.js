@@ -167,7 +167,7 @@ $("#add-btn").on("click", function(event) {
 
 var style_cookie_name = "style" ;
 var style_cookie_duration = 30 ;
-var style_domain = "thesitewizard.com" ;
+var style_domain = "localhost" ;
 
 // *** END OF CUSTOMISABLE SECTION ***
 // You do not need to customise anything below this line
@@ -189,6 +189,7 @@ function switch_style ( css_title )
       style_cookie_duration, style_domain );
   }
 }
+// Stops here, won't console log past this point
 function set_style_from_cookie()
 {
   var css_title = get_cookie( style_cookie_name );
