@@ -1,7 +1,11 @@
 
 
+<<<<<<< HEAD
 
   h1, h5,  .timesBody {
+=======
+  h1, h5, hr, .timesBody {
+>>>>>>> f2c95eb2713007d998293da7b5102ceb971cd6b8
       color: #eeeeee;
       text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }

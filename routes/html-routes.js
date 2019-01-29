@@ -14,6 +14,23 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+
+  app.get("/addEvent", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/addEvent.html"));
+  });
+
+  app.get("/createLogin", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/createLogin.html"));
+  });
+
+  // Need to add if/then statement to check for logged in, and if not reroute to login
+  app.get("/:id/calendar", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/calendar.html"));
+  });
+
+  app.get("/about", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/about.html"));
   });
 };
