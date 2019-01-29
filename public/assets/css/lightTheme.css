@@ -34,7 +34,7 @@ a {
 }
 
 .card {
-    background-image: url(../imgs/backgrounds/gplaypattern/gplaypattern_@2X.png); !important;
+    background-image: url(../imgs/backgrounds/gplaypattern/gplaypattern_@2X.png) !important;
     align-content: center;
     padding: 5px;
     /* border: #6d6d6d 5px solid; */
@@ -306,3 +306,28 @@ a.article, a.article:hover {
     display: flex; 
     justify-content: flex-end;
 }
+
+
+
+.dateHeader{
+    background-color: #ff8a50;
+
+      text-align: center;
+      padding: 50px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   } 
+.timesBody{
+    background: lightgrey;
+    text:black !important;
+}
+
+h1, h5, hr, .timesBody {
+    color: black;
+    text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.addButton {
+    background-color:lightgrey !important;
+    color: white;
+  }

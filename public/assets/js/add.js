@@ -163,11 +163,12 @@ $("#add-btn").on("click", function(event) {
 });
 
 
+
 // *** TO BE CUSTOMISED ***
 
 var style_cookie_name = "style" ;
 var style_cookie_duration = 30 ;
-var style_domain = "thesitewizard.com" ;
+var style_domain = "localhost" ;
 
 // *** END OF CUSTOMISABLE SECTION ***
 // You do not need to customise anything below this line
