@@ -1,0 +1,32 @@
+
+
+
+  h1, h5, hr, .timesBody {
+      color: #eeeeee;
+      text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  .dateHeader{
+    background-color: #26a69a;
+      text-align: center;
+      padding: 50px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   } 
+.timesBody{
+    background: #6d6d6d;
+}
+
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+    width: 0px;
+    }
+
+    button {
+        background-color: grey !important;
+        color: white;
+      }
