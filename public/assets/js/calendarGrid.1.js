@@ -378,6 +378,9 @@ let getUserEvents = () => {
             let objectToParse = {};
             objectToParse = $(idLocatorStart).nextUntil($(idLocatorEnd));
             // Modify timeblocks identified
+            console.log(idLocatorStart);
+            let startSubString = idLocatorStart.length - 4;
+            console.log(idLocatorStart.substring(startSubString,idLocatorStart.length));
             $($(idLocatorStart).prev()).addClass("border-bottom");
             $(idLocatorStart).addClass("rounded-top");
             $(idLocatorStart).attr("style", "height: 12.5px; background-color: orange");
@@ -414,7 +417,7 @@ let createModifiableEvent = (divTimeBlock) => {
                 }
             });
         } else {
-            console.log("Don't delete");
+            // Don't do anything
         }
     })
 }
