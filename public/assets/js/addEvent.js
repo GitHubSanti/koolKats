@@ -67,7 +67,7 @@ let appriopriateDateTimeDropdowns = () => {
         option.text(time);
         $("#eventEndTime").append(option);
     }
-}
+};
 
 // Empty each input box
 let clearForm = () => {
@@ -75,7 +75,7 @@ let clearForm = () => {
         .val("");
     $("#eventDescription")
         .val("");
-}
+};
 
 // Validate inputs and prepare data to be sent to database
 let makePOSTCall = () => {
@@ -130,7 +130,7 @@ let makePOSTCall = () => {
 
     promise.then((dataToServer) => {
         //  Create unique url to create user specific events
-        let url = "/api/addEvent/" + localStorage.getItem("UserID");
+        let url = "/api/modifyEvent/" + localStorage.getItem("UserID");
         // Send an AJAX POST-request with jQuery
         $.post(url, dataToServer, (serverRes => {
             //   window.location.href = "/test";
@@ -149,8 +149,9 @@ clearForm();
 console.log(window.location.href);
 
 
-// When user clicks 'Add Event' button
+// When user clicks 'Edit Event' button
 $("#add-btn").on("click", function(event) {
     event.preventDefault();
     makePOSTCall();
+
 });

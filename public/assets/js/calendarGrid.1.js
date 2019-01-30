@@ -377,11 +377,17 @@ let getUserEvents = () => {
             // Identify the blocks to adjust
             let objectToParse = {};
             objectToParse = $(idLocatorStart).nextUntil($(idLocatorEnd));
+            console.log(objectToParse);
+            console.log(objectToParse.length);
+            // if 15 min block, go ahead and round bottom of container
+            if (objectToParse.length == 0) $(idLocatorStart).addClass("rounded-bottom");
             // Modify timeblocks identified
-            console.log(idLocatorStart);
             let startSubString = idLocatorStart.length - 4;
             console.log(idLocatorStart.substring(startSubString,idLocatorStart.length));
-            $($(idLocatorStart).prev()).addClass("border-bottom");
+            // Add top of the hour border to timeblock where applicable
+            if (idLocatorStart.substring(startSubString,idLocatorStart.length) == "00AM" || idLocatorStart.substring(startSubString,idLocatorStart.length) == "00PM" ) {
+                $($(idLocatorStart).prev()).addClass("border-bottom");
+            };
             $(idLocatorStart).addClass("rounded-top");
             $(idLocatorStart).attr("style", "height: 12.5px; background-color: orange");
             $(idLocatorStart).attr("event-id", e.id);
@@ -396,8 +402,8 @@ let getUserEvents = () => {
                     $(element).removeClass("border-top");
                     $(element).addClass("rounded-bottom");
                     createModifiableEvent($(element));
-                }
-            }
+                };
+            };
         });
     }))
 };
@@ -405,23 +411,11 @@ let getUserEvents = () => {
 // Create modifable events
 let createModifiableEvent = (divTimeBlock) => {
     $(divTimeBlock).on("click", () => {
-        if (confirm("Are you sure you want to delete this event?")) {
-            let eventId = ($(divTimeBlock).attr("event-id"));
-            $.ajax({
-                method: "DELETE",
-                url: "/api/deleteEvent/" + eventId
-            }).then((serRes) => {
-                // If event successfully deleted recreate calender grid and retrieve events
-                if (serRes) {
-
-                }
-            });
-        } else {
-            // Don't do anything
-        }
+        console.log($(divTimeBlock).attr("event-id"));
+        localStorage.setItem("EventID",$(divTimeBlock).attr("event-id"));
+        window.location.assign("/modifyEvent");
     })
 }
-
 
 createCalendarGrid();
 getUserEvents();
