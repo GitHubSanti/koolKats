@@ -130,18 +130,23 @@ let makePUTCall = () => {
 
     promise.then((dataToServer) => {
         //  Create unique url to create user specific events
-        let url = "/api/modifyEvent/" + localStorage.getItem("UserID");
-        // Send an AJAX POST-request with jQuery
-        $.post(url, dataToServer, (serverRes => {
-            //   window.location.href = "/test";
-            console.log(serverRes);
-        }))
+        let url = "/api/modifyEvent/" + localStorage.getItem("EventID");
+        // Send an AJAX PUT-request with jQuery
+        $.ajax({
+            method: "PUT",
+            url: url,
+            data: dataToServer
+    }).then((serverRes) =>{
+        console.log(serverRes);
+    // }).catch((err) => {
+    //     console.log("ERROR:" + "\n" + err);
+    // });
+        });
+    })
+}
 
-    }).catch((err) => {
-        console.log("ERROR:" + "\n" + err);
-    });
-};
-
+appriopriateDateTimeDropdowns();
+clearForm();
 
 // Button to edit event in database
 $("#edit-btn").on("click", function(event) {
@@ -156,4 +161,3 @@ $("#delete-btn").on("click", function(event) {
     makePUTCall();
 
 });
-
