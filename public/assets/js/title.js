@@ -20,7 +20,7 @@ for(i=0;i<6;i++){
         var titlepart1 = rangbegin[0];
         var titlepart2 = moment().subtract(i-6,'days').format('LL')
         var title = titlepart1 + "-"+ titlepart2;
-        $(".dateHeader").append('<h2>'+title+'  '+'<button type="button" class="btn addButton">Add Event</button>'+'<h2>')
+        $(".dateHeader").append('<h2>'+title+'  '+'<button type="button" class="btn" id="addButton">Add Event</button>'+'<h2>')
         $("#sundayHeader,#mondayHeader,#tuesdayHeader,#wednesdayHeader,#thursdayHeader,#fridayHeader,#saturdayHeader").addClass("weekHeader")
     }
  }

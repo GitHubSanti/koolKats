@@ -57,7 +57,7 @@ a {
 }
 
 button {
-    background-image: url(../imgs/backgrounds/gplaypattern/gplaypattern_@2X.png);
+    background-color: transparent;
     color: #00766c;
     /* border: #26a69a 3px solid; */
     margin-right: 10px;
@@ -69,7 +69,7 @@ button {
 
 button:hover {
     background-color: #26a69a !important;
-    color: #26a69a;
+    color: black;
   }
 
 /*
@@ -307,15 +307,18 @@ a.article, a.article:hover {
     justify-content: flex-end;
 }
 
-
+#overlay{
+    background-color: #00766c;
+    opacity: .5;
+}
 
 .dateHeader{
-    background-color: #ff8a50;
-
-      text-align: center;
-      padding: 50px;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-      text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-image: url(../imgs/backgrounds/prism/prism.png);
+    color:#26a69a;
+    text-align: center !important;
+     padding: 50px !important;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) !important;
+      text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) !important;
    } 
 .timesBody{
     background: lightgrey;
@@ -331,7 +334,11 @@ h1, h5, hr, .timesBody {
     text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.addButton {
+#addButton {
     background-color:lightgrey !important;
-    color: white;
+    color: black;
+  }
+  #addButton:hover {
+    background-color: #26a69a !important;
+    color: black;
   }
