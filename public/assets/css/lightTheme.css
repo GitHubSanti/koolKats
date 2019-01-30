@@ -52,12 +52,8 @@ a {
     color: #26a69a;
     padding-left: 3%;
     border-bottom: #6d6d6d 5px solid;
-<<<<<<< HEAD
-    text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-=======
     margin-bottom: 50px;
     margin-top: 50px;
->>>>>>> 07d3a095a0bd620ceed3316b88f596e797f117f1
 }
 
 button {
@@ -68,8 +64,6 @@ button {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
-<<<<<<< HEAD
-=======
     text-decoration: none;
 }
 
@@ -170,7 +164,6 @@ a, a:hover, a:focus {
     padding: 10px;
     font-size: 1.1em;
     display: block;
->>>>>>> 07d3a095a0bd620ceed3316b88f596e797f117f1
 }
 #sidebar ul li a:hover {
     color: #00766c;
@@ -327,8 +320,12 @@ a.article, a.article:hover {
 .timesBody{
     background: lightgrey;
     text:black !important;
+    border-color: black !important;
 }
 
+.weekHeader, .timesBody, .sundayHeader, .mondayHeader, .tuesdayHeader, .wednesdayHeader, .thursdayHeader, .fridayHeader, .saturdayHeader{
+    border-color: black !important; 
+}
 h1, h5, hr, .timesBody {
     color: black;
     text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
