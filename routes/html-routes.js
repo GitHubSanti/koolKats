@@ -17,7 +17,7 @@ module.exports = function(app) {
   });
 
   app.get("/createUser", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/createUser.html"));
+    res.sendFile(path.join(__dirname, "../public/createLogin.html"));
   });
 
   app.get("/calendar", function(req, res) {

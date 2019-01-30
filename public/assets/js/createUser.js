@@ -1,18 +1,18 @@
 $("#new-account-btn").on("click", function(event) {
     event.preventDefault();
-    if (!($("#inputPassword").val().trim() === $("#confirmInputPassword").val().trim())) {
+    if (!($("#password").val().trim() === $("#validatePassword").val().trim())) {
 
         alert("Passwords don't match!");
 
-    } else if ($("#inputPassword").val().trim() == "" || $("#confirmInputPassword").val().trim() == "" || $("#inputUserName").val().trim() == "") {
+    } else if ($("#password").val().trim() == "" || $("#validatePassword").val().trim() == "" || $("#username").val().trim() == "") {
 
         alert("Please fill in all the fields.")
 
-    } else if ($("#inputPassword").val().trim() === $("#confirmInputPassword").val().trim() && !$("#inputPassword").val().trim() == "" && !$("#inputUserName").val().trim() == "") {
+    } else if ($("#password").val().trim() === $("#validatePassword").val().trim() && !$("#password").val().trim() == "" && !$("#username").val().trim() == "") {
         // Create User object to send to server
         let createUser = {};
-        createUser.usernameInput = $("#inputUserName").val().trim();
-        createUser.passwordInput = $("#inputPassword").val().trim();
+        createUser.usernameInput = $("#username").val().trim();
+        createUser.passwordInput = $("#password").val().trim();
 
         $.post("/api/createUser", createUser, (serverRes => {
             console.log(serverRes);
@@ -28,7 +28,7 @@ $("#new-account-btn").on("click", function(event) {
                 localStorage.setItem("UserID",serverRes.id);
                 console.log("local Storage user ID:" + localStorage.getItem("UserID"));
                 alert("New account created!");
-                window.location.assign("/addEvent");
+                window.location.assign("/");
             }
         }))
     }
