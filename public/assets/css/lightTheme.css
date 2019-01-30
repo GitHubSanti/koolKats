@@ -323,7 +323,7 @@ a.article, a.article:hover {
     border-color: black !important;
 }
 
-.weekHeader, .timesBody, .sundayHeader, .mondayHeader, .tuesdayHeader, .wednesdayHeader, .thursdayHeader, .fridayHeader, .saturdayHeader{
+.weekHeader, .timesBody, .sundayHeader, .mondayHeader, .tuesdayHeader, .wednesdayHeader, .thursdayHeader, .fridayHeader, .saturdayHeader, #timeLabels, #sunday, #monday, #tuesday, #wednesday, #thursday, #friday, #saturday{
     border-color: black !important; 
 }
 h1, h5, hr, .timesBody {
