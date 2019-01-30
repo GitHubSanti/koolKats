@@ -61,7 +61,7 @@ app.delete("/api/deleteEvent/:id", function(req,res) {
   })
 });
 
-  // GET route to retrieve all the events and the users associated
+  // GET route to retrieve all the events for user logged in
   app.get("/api/calendar/:id", function(req, res) {
     db.Events.findAll({
       where: {
