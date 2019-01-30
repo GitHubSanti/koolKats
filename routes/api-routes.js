@@ -17,4 +17,12 @@ module.exports = function(app) {
   app.post("/api/addEvent", function(req, res) {
 
   });
+
+  app.post("/api/createLogin", function(req, res) {
+
+  });
+
+  app.post("/api/login", function(req, res) {
+
+  });
 };

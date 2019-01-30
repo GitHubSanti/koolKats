@@ -1,7 +1,15 @@
 
 
+<<<<<<< HEAD
 
+<<<<<<< HEAD
   h1, h5,  .timesBody, .weekHeader {
+=======
+  h1, h5,  .timesBody {
+=======
+  h1, h5, hr, .timesBody {
+>>>>>>> f2c95eb2713007d998293da7b5102ceb971cd6b8
+>>>>>>> 50acbfa9f47c7e149fb59c976f27cb2a8bc5720d
       color: #eeeeee;
       text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
