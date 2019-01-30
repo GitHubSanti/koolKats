@@ -351,4 +351,56 @@ let createCalendarGrid = () => {
     };
 };
 
+// Function to grab events for user logged in
+let getUserEvents = () => {
+    let url = "/api/calendar/" + localStorage.getItem("UserID");
+    // Send GET-request with jQuery
+    $.get(url, (serverRes => {
+        //   window.location.href = "/test";
+        serverRes.forEach(e => {
+            // Identify where to start modifying
+            let idLocatorStart = e.startDate + e.startTime;
+            idLocatorStart = idLocatorStart.replace(" ", "");
+            idLocatorStart = idLocatorStart.replace(":", "");
+            idLocatorStart = idLocatorStart.replace("/", "");
+            idLocatorStart = idLocatorStart.replace("/", "");
+            idLocatorStart = "#" + idLocatorStart;
+
+            // Identify where to end modifying
+            let idLocatorEnd = e.startDate + e.endTime;
+            idLocatorEnd = idLocatorEnd.replace(" ", "");
+            idLocatorEnd = idLocatorEnd.replace(":", "");
+            idLocatorEnd = idLocatorEnd.replace("/", "");
+            idLocatorEnd = idLocatorEnd.replace("/", "");
+            idLocatorEnd = "#" + idLocatorEnd;
+
+            // Identify the blocks to adjust
+            let objectToParse = {};
+            objectToParse = $(idLocatorStart).nextUntil($(idLocatorEnd));
+            // Modify timeblocks identified
+            console.log(idLocatorStart);
+            let startSubString = idLocatorStart.length - 4;
+            console.log(idLocatorStart.substring(startSubString,idLocatorStart.length));
+            $($(idLocatorStart).prev()).addClass("border-bottom");
+            $(idLocatorStart).addClass("rounded-top");
+            $(idLocatorStart).attr("style", "height: 12.5px; background-color: orange");
+            $(idLocatorStart).attr("event-id", e.id);
+            createModifiableEvent($(idLocatorStart));
+            for (let index = 0; index < objectToParse.length; index++) {
+                let element = objectToParse[index];
+                $(element).attr("style", "height: 12.5px; background-color: orange");
+                $(element).attr("event-id", e.id);
+                $(element).removeClass("border-top");
+                createModifiableEvent($(element));
+                if (index == objectToParse.length - 1) {
+                    $(element).removeClass("border-top");
+                    $(element).addClass("rounded-bottom");
+                    createModifiableEvent($(element));
+                }
+            }
+        });
+    }))
+};
+
 createCalendarGrid();
+getUserEvents();
