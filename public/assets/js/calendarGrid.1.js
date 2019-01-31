@@ -402,5 +402,14 @@ let getUserEvents = () => {
     }))
 };
 
+// Create modifable events
+let createModifiableEvent = (divTimeBlock) => {
+    $(divTimeBlock).on("click", () => {
+        console.log($(divTimeBlock).attr("event-id"));
+        localStorage.setItem("EventID",$(divTimeBlock).attr("event-id"));
+        window.location.assign("/modifyEvent");
+    })
+}
+
 createCalendarGrid();
 getUserEvents();
