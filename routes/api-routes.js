@@ -78,7 +78,6 @@ module.exports = function(app) {
         });
     });
 
-<<<<<<< HEAD
   // GET route to retrieve all the events for user logged in
   app.get("/api/calendar/:id", function(req, res) {
     db.Events.findAll({
@@ -87,7 +86,7 @@ module.exports = function(app) {
       }
     }).then(function(allEvents) {
       res.json(allEvents);
-=======
+
     // DELETE route for deleting specificed event
     app.delete("/api/deleteEvent/:id", function(req, res) {
         db.Events.destroy({
@@ -97,6 +96,5 @@ module.exports = function(app) {
         }).then(function(DBresults) {
             res.json(DBresults);
         })
->>>>>>> d5df232... new route added PUT for modifying current event
     });
 };
