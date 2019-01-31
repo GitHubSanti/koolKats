@@ -86,6 +86,8 @@ module.exports = function(app) {
       }
     }).then(function(allEvents) {
       res.json(allEvents);
+    })
+  })
 
     // DELETE route for deleting specificed event
     app.delete("/api/deleteEvent/:id", function(req, res) {
@@ -97,4 +99,4 @@ module.exports = function(app) {
             res.json(DBresults);
         })
     });
-};
+}
