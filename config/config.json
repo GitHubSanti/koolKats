@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "YOUR_USERNAME_HERE",
-    "password": "YOUR_PASSWORD_HERE",
+    "username": "root",
+    "password": "Oogabooga1!",
     "database": "calendar",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "YOUR_USERNAME_HERE",
-    "password": "YOUR_PASSWORD_HERE",
+    "username": "root",
+    "password": "Oogabooga1!",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "YOUR_USERNAME_HERE",
-    "password": "YOUR_PASSWORD_HERE",
+    "username": "root",
+    "password": "Oogabooga1!",
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
