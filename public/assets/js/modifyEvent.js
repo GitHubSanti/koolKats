@@ -138,9 +138,6 @@ let makePUTCall = () => {
             data: dataToServer
     }).then((serverRes) =>{
         console.log(serverRes);
-    // }).catch((err) => {
-    //     console.log("ERROR:" + "\n" + err);
-    // });
         });
     })
 }
@@ -158,6 +155,11 @@ $("#edit-btn").on("click", function(event) {
 // Button to delete event in database
 $("#delete-btn").on("click", function(event) {
     event.preventDefault();
-    makePUTCall();
-
+    var eventId = localStorage.getItem("EventID");
+    $.ajax({
+      method: "DELETE",
+      url: "/api/deleteEvent/" + eventId
+    }).then(() => {
+        window.location.assign("/calendar");
+    });
 });
