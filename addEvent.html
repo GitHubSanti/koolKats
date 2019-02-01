@@ -15,6 +15,9 @@
   <link type="text/css" rel="stylesheet" href="assets/css/theme.css" title="default">
   <!-- Alternative Style Sheet -->
   <link type="text/css" rel="alternate stylesheet" href="assets/css/lightTheme.css" title="lightTheme">
+
+
+
   <!-- Icons -->
   <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
   <!-- Animate.css -->
@@ -40,21 +43,21 @@
       </div>
       <!-- Navbar menu options -->
       <ul class="list-unstyled components">
-          <li class="active">
-              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Your
-                  Planner</a>
-              <ul class="collapse list-unstyled" id="homeSubmenu">
-                  <li>
-                      <a href="/calendar">Home</a>
-                  </li>
-                  <li>
-                      <a href="/addEvent">Create Event</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-              <a href="/about">About</a>
-          </li>
+        <li class="active">
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Your
+            Calendar</a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li>
+              <a href="/calendar">Home</a>
+            </li>
+            <li>
+              <a href="/addEvent">Create Event</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
       </ul>
       <!-- Navbar buttons -->
       <ul class="list-unstyled CTAs">
@@ -97,6 +100,7 @@
         <button type="button" onclick="switch_style('lightTheme');return false;" name="theme" value="lightTheme" id="lightTheme">LIGHT</button>
       </div>
 
+
       <!-- Title -->
       <div class="container-fluid animated bounceInDown col-12">
         <div class="row">
@@ -114,7 +118,7 @@
             <div class="card">
               <div class="card-body">
                 <!-- Title Form -->
-                <form action="" method="POST" role="form">
+                <form action="/api/addEvent" method="POST" role="form">
                   <div class="form-group">
                     <label for="">Title</label>
                     <input type="text" class="form-control col-6" id="eventTitle" placeholder="">

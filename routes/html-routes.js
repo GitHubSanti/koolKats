@@ -28,4 +28,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/addEvent.html"));
   });
 
+  app.get("/modifyEvent", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/modifyEvent.html"));
+  });
 };
