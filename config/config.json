@@ -1,36 +1,21 @@
 {
   "development": {
-<<<<<<< HEAD
     "username": "",
     "password": "",
-=======
-    "username": "root",
-    "password": "Oogabooga1!",
->>>>>>> fe6267f9bc3efbaa2926d2034bdcc2c9eb3c94d0
     "database": "calendar",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-<<<<<<< HEAD
     "username": "",
     "password": "",
-=======
-    "username": "root",
-    "password": "Oogabooga1!",
->>>>>>> fe6267f9bc3efbaa2926d2034bdcc2c9eb3c94d0
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-<<<<<<< HEAD
     "username": "",
     "password": "",
-=======
-    "username": "root",
-    "password": "Oogabooga1!",
->>>>>>> fe6267f9bc3efbaa2926d2034bdcc2c9eb3c94d0
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
