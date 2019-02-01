@@ -52,30 +52,24 @@ a {
     color: #26a69a;
     padding-left: 3%;
     border-bottom: #6d6d6d 5px solid;
-<<<<<<< HEAD
-    text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-=======
     margin-bottom: 50px;
     margin-top: 50px;
->>>>>>> 07d3a095a0bd620ceed3316b88f596e797f117f1
 }
 
 button {
-    background-image: url(../imgs/backgrounds/gplaypattern/gplaypattern_@2X.png);
+    background-color: transparent;
     color: #00766c;
     /* border: #26a69a 3px solid; */
     margin-right: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
-<<<<<<< HEAD
-=======
     text-decoration: none;
 }
 
 button:hover {
     background-color: #26a69a !important;
-    color: #26a69a;
+    color: black;
   }
 
 /*
@@ -170,7 +164,6 @@ a, a:hover, a:focus {
     padding: 10px;
     font-size: 1.1em;
     display: block;
->>>>>>> 07d3a095a0bd620ceed3316b88f596e797f117f1
 }
 #sidebar ul li a:hover {
     color: #00766c;
@@ -314,27 +307,38 @@ a.article, a.article:hover {
     justify-content: flex-end;
 }
 
-
+#overlay{
+    background-color: #00766c;
+    opacity: .5;
+}
 
 .dateHeader{
-    background-color: #ff8a50;
-
-      text-align: center;
-      padding: 50px;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-      text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-image: url(../imgs/backgrounds/prism/prism.png);
+    color:#26a69a;
+    text-align: center !important;
+     padding: 50px !important;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) !important;
+      text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) !important;
    } 
 .timesBody{
     background: lightgrey;
     text:black !important;
+    border-color: black !important;
 }
 
+.weekHeader, .timesBody, .sundayHeader, .mondayHeader, .tuesdayHeader, .wednesdayHeader, .thursdayHeader, .fridayHeader, .saturdayHeader, #timeLabels, #sunday, #monday, #tuesday, #wednesday, #thursday, #friday, #saturday{
+    border-color: black !important; 
+}
 h1, h5, hr, .timesBody {
     color: black;
     text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.addButton {
+#addButton {
     background-color:lightgrey !important;
-    color: white;
+    color: black;
+  }
+  #addButton:hover {
+    background-color: #26a69a !important;
+    color: black;
   }

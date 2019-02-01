@@ -1,13 +1,15 @@
 
 
 
-  h1, h5, hr, .timesBody {
+  h1, h5,  .timesBody, .weekHeader {
+
       color: #eeeeee;
       text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
 
   .dateHeader{
-    background-color: #26a69a;
+    background-image: url(../imgs/backgrounds/gplaypattern/gplaypattern.png);
+    color:  #ff5722 !important;
       text-align: center;
       padding: 50px;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -26,7 +28,12 @@ html {
     width: 0px;
     }
 
-    button {
+    #addButton {
         background-color: grey !important;
+        color: white;
+      }
+
+      #addButton:hover {
+        background-color: #ff5722 !important;
         color: white;
       }
