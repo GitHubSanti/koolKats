@@ -1,4 +1,5 @@
 
+
 for(i=0;i<6;i++){
     var dayIndex = moment().subtract(i, 'days').format('dddd');
     if (dayIndex == 'Sunday'){
@@ -21,7 +22,7 @@ for(i=0;i<6;i++){
         var titlepart2 = moment().subtract(i-6,'days').format('LL')
         var title = titlepart1 + "-"+ titlepart2;
         $(".dateHeader").append('<h2>'+title+'  '+'<a href="/addEvent"><button type="button" class="btn addButton">Add Event</button></a>'+'<h2>')
-        $("#sundayHeader,#mondayHeader,#tuesdayHeader,#wednesdayHeader,#thursdayHeader,#fridayHeader,#saturdayHeader").addClass("timesBody")
+        $("#sundayHeader,#mondayHeader,#tuesdayHeader,#wednesdayHeader,#thursdayHeader,#fridayHeader,#saturdayHeader").addClass("weekHeader")
     }
  }
  
