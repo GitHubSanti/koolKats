@@ -28,12 +28,12 @@ html {
     width: 0px;
     }
 
-    #addButton {
+    .addButton {
         background-color: grey !important;
         color: white;
       }
 
-      #addButton:hover {
+      .addButton:hover {
         background-color: #ff5722 !important;
         color: white;
       }
