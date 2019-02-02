@@ -1,6 +1,6 @@
 
 
-for(i=0;i<6;i++){
+for(i=0;i<7;i++){
     var dayIndex = moment().subtract(i, 'days').format('dddd');
     if (dayIndex == 'Sunday'){
         var SunDate = moment().subtract(i,'days').format('l');
