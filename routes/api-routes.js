@@ -32,7 +32,38 @@ module.exports = function(app) {
                 password: req.body.passwordInput
             }
         }).then(function(data) {
-            res.json(data);
+            let serverRes = {}
+            if (data.length > 0) {
+                console.log("found user!");
+                serverRes.UserID = data[0].dataValues.id
+                serverRes.UserName = data[0].dataValues.username
+                res.json(serverRes);
+            } else {
+                // User not found
+                res.json(data);
+            }
+        });
+    });
+
+    // POST route to see if visitor has been logged in
+    app.post("/api/loggedIn", function(req, res) {
+        db.Users.findAll({
+            where: {
+                id: req.body.userID,
+                username: req.body.username
+            }
+        }).then(function(data) {
+            console.log(data);
+            let serverRes = {}
+            if (data.length > 0) {
+                console.log("found user!");
+                serverRes.UserID = data[0].dataValues.id
+                serverRes.UserName = data[0].dataValues.username
+                res.json(serverRes);
+            } else {
+                // User not found
+                res.json(data);
+            }
         });
     });
 

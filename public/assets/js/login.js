@@ -10,12 +10,11 @@ $("#login-btn").on("click", function(event) {
         $.post("/api/login", userCredentials, (serverRes => {
             if (serverRes.length == 0) {
                 alert("username and password combination doesn't exist");
-            } else if (serverRes.length > 0) {
+            } else {
                 console.log("You're logged in!");
-                console.log(serverRes[0].id);
-                localStorage.setItem("UserID",serverRes[0].id);
+                localStorage.setItem("UserID",serverRes.UserID);
+                localStorage.setItem("UserName",serverRes.UserName);
                 window.location.assign("/calendar");
-
             }
         }))
     }

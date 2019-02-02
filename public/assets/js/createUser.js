@@ -24,9 +24,9 @@ $("#new-account-btn").on("click", function(event) {
                 }
             }
             if ('id' in serverRes) {
-                // Store User ID
+                // Store User ID + UserName
                 localStorage.setItem("UserID",serverRes.id);
-                console.log("local Storage user ID:" + localStorage.getItem("UserID"));
+                localStorage.setItem("UserName",serverRes.username);
                 alert("New account created!");
                 window.location.assign("/");
             }
