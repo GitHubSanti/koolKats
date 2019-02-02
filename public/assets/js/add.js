@@ -89,12 +89,12 @@ let makePOSTCall = () => {
 
       newEvent.eventTitle = $("#eventTitle").val().trim();
   };
-  if ($("#eventOrganizer").val().trim() == "") {
-      alert("Please give the event an organizer.")
-  } else {
-      passDataReq.push(true)
-      newEvent.eventOrganizer = $("#eventOrganizer").val().trim();
-  };
+//   if ($("#eventOrganizer").val().trim() == "") {
+//       alert("Please give the event an organizer.")
+//   } else {
+//       passDataReq.push(true)
+//       newEvent.eventOrganizer = $("#eventOrganizer").val().trim();
+//   };
   if (moment().format("MM/DD/YYYY") > moment($("#eventStartDate").val().trim()).format("MM/DD/YYYY")) {
       alert("Select a new start date. Can't schedule something in the past!")
   } else {
@@ -128,7 +128,7 @@ let makePOSTCall = () => {
   // Determines whether or not to make a call to the server
   let promise = new Promise((resolve, reject) => {
       // console.log(passDataReq);
-      if (passDataReq.length == 6) {
+      if (passDataReq.length == 5) {
           resolve(newEvent);
       } else {
           reject("Data didn't meet all requirements. Can't create event");
@@ -142,6 +142,9 @@ let makePOSTCall = () => {
       $.post(url, dataToServer, (serverRes => {
           //   window.location.href = "/test";
           console.log(serverRes);
+          if(serverRes){
+            window.location.assign("/calendar");
+          }
       }))
 
   }).catch((err) => {
@@ -153,7 +156,7 @@ appriopriateDateTimeDropdowns();
 clearForm();
 
 // Check to see URL
-console.log(window.location.href);
+//console.log(window.location.href);
 
 
 // When user clicks 'Add Event' button
@@ -163,11 +166,12 @@ $("#add-btn").on("click", function(event) {
 });
 
 
+
 // *** TO BE CUSTOMISED ***
 
 var style_cookie_name = "style" ;
 var style_cookie_duration = 30 ;
-var style_domain = "thesitewizard.com" ;
+var style_domain = "localhost" ;
 
 // *** END OF CUSTOMISABLE SECTION ***
 // You do not need to customise anything below this line
@@ -199,7 +203,7 @@ function set_style_from_cookie()
 function set_cookie ( cookie_name, cookie_value,
     lifespan_in_days, valid_domain )
 {
-    
+    console.log(cookie_name)
     var domain_string = valid_domain ?
                        ("; domain=" + valid_domain) : '' ;
     document.cookie = cookie_name +
@@ -224,4 +228,36 @@ function get_cookie ( cookie_name )
 	return '' ;
 }
 
+// Side Bar JS
 
+$(document).ready(function () {
+
+    set_style_from_cookie();
+    //  $("#sidebar").mCustomScrollbar({
+    //       theme: "minimal"
+    //  });
+    //switch_style();
+    
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+
+$(document).ready(function () {
+
+    //  $("#sidebar").mCustomScrollbar({
+    //       theme: "minimal"
+    //  });
+
+    $('#sidebarCollapse').on('click', function () {
+        // open or close navbar
+        $('#sidebar').toggleClass('active');
+        // close dropdowns
+        $('.collapse.in').toggleClass('in');
+        // and also adjust aria-expanded attributes we use for the open/closed arrows
+        // in our CSS
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+
+});
