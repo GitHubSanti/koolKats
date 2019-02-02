@@ -389,12 +389,12 @@ let getUserEvents = () => {
                 $($(idLocatorStart).prev()).addClass("border-bottom");
             };
             $(idLocatorStart).addClass("rounded-top");
-            $(idLocatorStart).attr("style", "height: 12.5px; background-color: orange");
+            $(idLocatorStart).attr("style", "height: 12.5px; background-color: #ff5722");
             $(idLocatorStart).attr("event-id", e.id);
             createModifiableEvent($(idLocatorStart));
             for (let index = 0; index < objectToParse.length; index++) {
                 let element = objectToParse[index];
-                $(element).attr("style", "height: 12.5px; background-color: orange");
+                $(element).attr("style", "height: 12.5px; background-color: #ff5722");
                 $(element).attr("event-id", e.id);
                 $(element).removeClass("border-top");
                 createModifiableEvent($(element));
@@ -415,7 +415,28 @@ let createModifiableEvent = (divTimeBlock) => {
         localStorage.setItem("EventID",$(divTimeBlock).attr("event-id"));
         window.location.assign("/modifyEvent");
     })
+    // Create hoverable popover to show event details
+    $(divTimeBlock).popover({
+        trigger: "hover",
+        title: "Event Title",
+        container: "body",
+        placement: "bottom",
+        content: "event details"
+    });
+}
+
+// Toggle color of event blocks according to light or dark theme
+let colorEventBlocksCorrectly = () => {
+    // Switch to orange when 'DARK' theme button is selected
+    $('#default').click(() => {
+        $('[event-id]').css("background-color", $("#title").css("color"));
+    });
+    // Switch to teal when'LIGHT' theme button is selected
+    $('#lightTheme').click(() => {
+        $('[event-id]').css("background-color", $("#title").css("color"));
+    });
 }
 
 createCalendarGrid();
 getUserEvents();
+colorEventBlocksCorrectly();
