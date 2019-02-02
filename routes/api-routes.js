@@ -53,7 +53,6 @@ module.exports = function(app) {
                 username: req.body.username
             }
         }).then(function(data) {
-            console.log(data);
             let serverRes = {}
             if (data.length > 0) {
                 console.log("found user!");
@@ -75,6 +74,21 @@ module.exports = function(app) {
             }
         }).then(function(allEvents) {
             res.json(allEvents);
+        });
+    });
+
+    // GET route to retrieve specific event for popover functionality
+    app.get("/api/specificEvent/:eventId", function(req, res) {
+        db.Events.findOne({
+            where: {
+                id: req.params.eventId
+            }
+        }).then(function(specificEvent) {
+            for (const iterator in specificEvent) {
+                // console.log(iterator);
+                console.log(specificEvent.dataValues);
+            }
+            // res.json(specificEvent);
         });
     });
 
@@ -108,17 +122,6 @@ module.exports = function(app) {
             res.json(modifiedEvent);
         });
     });
-
-  // GET route to retrieve all the events for user logged in
-  app.get("/api/calendar/:id", function(req, res) {
-    db.Events.findAll({
-      where: {
-        UserId: req.params.id
-      }
-    }).then(function(allEvents) {
-      res.json(allEvents);
-    })
-  })
 
     // DELETE route for deleting specificed event
     app.delete("/api/deleteEvent/:id", function(req, res) {

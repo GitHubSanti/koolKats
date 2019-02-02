@@ -392,18 +392,22 @@ let getUserEvents = () => {
             $(idLocatorStart).attr("style", "height: 12.5px; background-color: #ff5722");
             $(idLocatorStart).attr("event-id", e.id);
             createModifiableEvent($(idLocatorStart));
+            createPopoverContent($(idLocatorStart),e)
             for (let index = 0; index < objectToParse.length; index++) {
                 let element = objectToParse[index];
                 $(element).attr("style", "height: 12.5px; background-color: #ff5722");
                 $(element).attr("event-id", e.id);
                 $(element).removeClass("border-top");
                 createModifiableEvent($(element));
+                createPopoverContent($(element),e)
                 if (index == objectToParse.length - 1) {
                     $(element).removeClass("border-top");
                     $(element).addClass("rounded-bottom");
                     createModifiableEvent($(element));
+                    createPopoverContent($(element),e)
                 };
             };
+        
         });
     }))
 };
@@ -411,17 +415,19 @@ let getUserEvents = () => {
 // Create modifable events
 let createModifiableEvent = (divTimeBlock) => {
     $(divTimeBlock).on("click", () => {
-        console.log($(divTimeBlock).attr("event-id"));
         localStorage.setItem("EventID",$(divTimeBlock).attr("event-id"));
         window.location.assign("/modifyEvent");
     })
+}
+// Create popover and content
+let createPopoverContent = (divTimeBlock,content) => {
     // Create hoverable popover to show event details
     $(divTimeBlock).popover({
         trigger: "hover",
-        title: "Event Title",
-        container: "body",
+        title: content.title,
+        // container: "body",
         placement: "bottom",
-        content: "event details"
+        content: content.description
     });
 }
 
