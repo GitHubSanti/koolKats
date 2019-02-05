@@ -163,3 +163,98 @@ $("#delete-btn").on("click", function(event) {
         window.location.assign("/calendar");
     });
 });
+
+// *** TO BE CUSTOMISED ***
+
+var style_cookie_name = "style" ;
+var style_cookie_duration = 30 ;
+var style_domain = "localhost" ;
+
+// *** END OF CUSTOMISABLE SECTION ***
+// You do not need to customise anything below this line
+
+function switch_style ( css_title )
+{
+
+  var i, link_tag ;
+  for (i = 0, link_tag = document.getElementsByTagName("link") ;
+    i < link_tag.length ; i++ ) {
+    if ((link_tag[i].rel.indexOf( "stylesheet" ) != -1) &&
+      link_tag[i].title) {
+      link_tag[i].disabled = true ;
+      if (link_tag[i].title == css_title) {
+        link_tag[i].disabled = false ;
+      }
+    }
+    set_cookie( style_cookie_name, css_title,
+      style_cookie_duration, style_domain );
+  }
+}
+function set_style_from_cookie()
+{
+  var css_title = get_cookie( style_cookie_name );
+  if (css_title.length) {
+    switch_style( css_title );
+  }
+}
+function set_cookie ( cookie_name, cookie_value,
+    lifespan_in_days, valid_domain )
+{
+    console.log(cookie_name)
+    var domain_string = valid_domain ?
+                       ("; domain=" + valid_domain) : '' ;
+    document.cookie = cookie_name +
+                       "=" + encodeURIComponent( cookie_value ) +
+                       "; max-age=" + 60 * 60 *
+                       24 * lifespan_in_days +
+                       "; path=/" + domain_string ;
+}
+function get_cookie ( cookie_name )
+{
+    
+	var cookie_string = document.cookie ;
+	if (cookie_string.length != 0) {
+		var cookie_array = cookie_string.split( '; ' );
+		for (i = 0 ; i < cookie_array.length ; i++) {
+			cookie_value = cookie_array[i].match ( cookie_name + '=(.*)' );
+			if (cookie_value != null) {
+				return decodeURIComponent ( cookie_value[1] ) ;
+			}
+		}
+	}
+	return '' ;
+}
+
+// Side Bar JS
+
+$(document).ready(function () {
+
+    set_style_from_cookie();
+    //  $("#sidebar").mCustomScrollbar({
+    //       theme: "minimal"
+    //  });
+    //switch_style();
+    
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+
+$(document).ready(function () {
+
+    //  $("#sidebar").mCustomScrollbar({
+    //       theme: "minimal"
+    //  });
+
+    $('#sidebarCollapse').on('click', function () {
+        // open or close navbar
+        $('#sidebar').toggleClass('active');
+        // close dropdowns
+        $('.collapse.in').toggleClass('in');
+        // and also adjust aria-expanded attributes we use for the open/closed arrows
+        // in our CSS
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+
+});
