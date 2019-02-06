@@ -171,7 +171,7 @@ $("#add-btn").on("click", function(event) {
 
 var style_cookie_name = "style" ;
 var style_cookie_duration = 30 ;
-var style_domain = "localhost" ;
+var style_domain = "https://nameless-garden-29305.herokuapp.com/" ;
 
 // *** END OF CUSTOMISABLE SECTION ***
 // You do not need to customise anything below this line
