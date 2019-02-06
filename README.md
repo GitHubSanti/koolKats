@@ -39,3 +39,7 @@ The koolKat's planner is a weekly planner that allows users to create an account
 *Allow calendar sharing for groups/organizations as outreach. 
 *A newsletter feature for paid subscription holders
 *Monthly Themes
+
+###Heroku
+
+https://nameless-garden-29305.herokuapp.com/
