@@ -12,8 +12,8 @@ config.password = process.env.SQL_SECRET;
 
 var db = {};
 
-if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable]);
+if (process.env.JAWSDB_URL) {
+  var sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
